@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = slider.querySelectorAll('.slides img');
     if (!slides.length) return;
     const dotsContainer = slider.querySelector('.slider-dots');
-    const intervalMs = parseInt(slider.dataset.interval || '4000', 10);
+    const intervalMs = parseInt(slider.dataset.interval || '2000', 10);
 
     let current = 0;
 
