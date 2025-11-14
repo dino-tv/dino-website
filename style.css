@@ -34,7 +34,7 @@ a {
 @media (max-width: 768px) {
   .page-wrap {
     padding: 0 16px 32px;
-    margin-top: 16px;
+    margin-top: 32px;
   }
   .section-title {
     font-size: 20px;
@@ -833,6 +833,33 @@ html, body {
 /* 모든 페이지 모바일에서 사진과 타이틀이 겹치지 않도록 여백 강제 */
 @media (max-width: 1024px) {
   .hero-main-right {
-    margin-top: 16px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-main {
+    gap: 28px;
+  }
+}
+
+/* 모바일에서 히어로 사진/텍스트 완전히 분리 */
+@media (max-width: 768px) {
+  .hero-main {
+    display: block;
+  }
+  .hero-main-left,
+  .hero-main-right {
+    width: 100%;
+  }
+  .hero-main-left {
+    margin-bottom: 0;
+  }
+  .hero-main-right {
+    position: static !important;
+    margin-top: 32px;
+  }
+  .slider {
+    position: relative !important;
   }
 }
