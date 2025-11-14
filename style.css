@@ -863,3 +863,45 @@ html, body {
     position: relative !important;
   }
 }
+
+/* 모바일에서 '인치대별 추천 구성' 표 폭 줄이기: 비고(4열) 숨김 */
+@media (max-width: 768px) {
+  .price-table {
+    min-width: 0;
+    font-size: 12px;
+  }
+  .price-table th:nth-child(4),
+  .price-table td:nth-child(4) {
+    display: none;
+ 
+ }
+/* 테이블이 카드 밖으로 삐져나오지 않게 */
+.price-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+/* 테이블 자체 레이아웃 안정화 */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* 셀 안의 텍스트가 자동 줄바꿈 되도록 */
+.price-table th,
+.price-table td {
+  padding: 12px 10px;
+  border: 1px solid #e5e5e5;
+  word-break: keep-all;
+  white-space: normal;
+}
+
+/* 헤더 스타일 */
+.price-table th {
+  background: #f7f9fc;
+  font-weight: 600;
+}
+
+}

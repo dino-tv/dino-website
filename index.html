@@ -17,7 +17,7 @@
       </div>
       <div>
         <div class="logo-text-main">호텔 TV · DID · 서비스 로봇 전문기업</div>
-        <div class="logo-text-sub">객실 TV, 안내 디스플레이, 로봇까지 한 번에 제안합니다.</div>
+        <div class="logo-text-sub">객실 TV, 안내 디스플레이, 로봇까지 ONESTOP 솔루션</div>
       </div>
     </div>
     <div class="tel-area">
@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="hero-main-right">
-        <div class="hero-title">호텔 TV · DID · 로봇 설치는 DINO<br> 맡겨주세요.</div>
+        <div class="hero-title">호텔 TV · DID · 로봇 <br>구매부터 설치/AS까지 <br>DINO 맡겨주세요.</div>
         <div class="hero-sub">
           객실 TV 교체부터 로비 DID, 서빙·배달 로봇까지<br/>
           호텔 운영에 꼭 맞는 구성을 함께 설계해드립니다.
@@ -101,41 +101,50 @@
         간단한 정보만 남겨주시면, 호텔 전문 담당자가 친절하게 안내드립니다.
       </div>
 
-      <form>
+      <form id="quoteForm" action="https://formspree.io/f/mnnljvqj" method="POST">
+        <input type="hidden" name="_subject" value="[DINO] 실시간 무료 견적 신청" />
+        <input type="hidden" name="_language" value="ko" />
+
         <div class="form-row">
           <label>성함 *</label>
-          <input type="text" placeholder="이름을 입력하세요" />
+          <input type="text" name="name" placeholder="이름을 입력하세요" required />
         </div>
         <div class="form-row">
           <label>연락처 *</label>
-          <input type="text" placeholder="연락 가능한 번호" />
+          <input type="text" name="phone" placeholder="연락 가능한 번호" required />
+        </div>
+        <div class="form-row">
+          <label>업체명</label>
+          <input type="text" name="hotel" placeholder="호텔/모텔/펜션 이름" />
         </div>
         <div class="form-row">
           <label>지역 *</label>
-          <select>
-            <option>수도권-서울/인천/경기</option>
-            <option>부산/울산/경남</option>
-            <option>대구/경북</option>
-            <option>광주/전라/제주</option>
-            <option>기타 지역</option>
+          <select name="region" required>
+            <option value="">지역을 선택하세요</option>
+            <option value="수도권-서울/인천/경기">수도권-서울/인천/경기</option>
+            <option value="부산/울산/경남">부산/울산/경남</option>
+            <option value="대구/경북">대구/경북</option>
+            <option value="광주/전라/제주">광주/전라/제주</option>
+            <option value="강원/충청">강원/충청</option>
+            <option value="기타 지역">기타 지역</option>
           </select>
         </div>
         <div class="form-row">
           <label>객실 수</label>
-          <input type="text" placeholder="예: 40실 / 70실" />
+          <input type="text" name="rooms" placeholder="예: 40실 / 70실" />
         </div>
         <div class="form-row">
-          <label>관심항목</label>
-          <input type="text" placeholder="호텔TV, DID, 로봇 등" />
+          <label>관심 항목</label>
+          <input type="text" name="interest" placeholder="호텔TV, DID, 로봇 등" />
         </div>
         <div class="form-row">
-          <label>메모</label>
-          <textarea placeholder="원하시는 인치대, 예산, 희망 일정 등을 적어주세요."></textarea>
+          <label>추가 메모</label>
+          <textarea name="memo" placeholder="원하시는 인치대, 예산, 희망 일정 등을 적어주세요."></textarea>
         </div>
         <div class="form-check-row">
-          <label><input type="checkbox" /> 개인정보 활용 동의</label>
+          <label><input type="checkbox" name="agree" value="yes" required /> 개인정보 활용 동의</label>
         </div>
-        <button type="button" class="btn-submit">견적 문의 (형식용 버튼)</button>
+        <button type="submit" class="btn-submit">실시간 견적 요청</button>
       </form>
     </div>
 
@@ -186,7 +195,7 @@
     <div class="section-title">설치 후기</div>
     <div class="review-grid">
       <div class="review-card">
-        <div class="review-img">80인치 호텔 TV 설치 사진 자리</div>
+        <div class="review-img">85인치 호텔 TV 설치 사진 자리</div>
         <div class="review-body">
           <div class="review-title">80인치 대형 호텔TV 벽걸이로 교체!</div>
           <div class="review-text">
