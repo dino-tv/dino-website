@@ -45,29 +45,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-// 실시간 견적 요청 폼(Formspree 연동)
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('quoteForm');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("quoteForm");
   if (!form) return;
 
-  form.addEventListener('submit', async function(e) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     const formData = new FormData(form);
+
     try {
       const res = await fetch(form.action, {
-        method: 'POST',
+        method: "POST",
         body: formData,
-        headers: { 'Accept': 'application/json' }
+        headers: { Accept: "application/json" },
       });
+
       if (res.ok) {
-        alert('견적 요청이 접수되었습니다. 빠르게 연락드리겠습니다!');
+        alert("견적 요청이 접수되었습니다. 빠르게 연락드릴게요!");
         form.reset();
       } else {
-        alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+        alert("전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
       }
     } catch (err) {
-      alert('네트워크 오류가 발생했습니다. 다시 한 번 시도해주세요.');
+      alert("네트워크 오류가 발생했습니다. 다시 한 번 시도해주세요.");
     }
   });
 });
+
+// 전체 페이지 우클릭(컨텍스트 메뉴) 방지
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
