@@ -548,12 +548,13 @@ a {
 }
 
 .review-img {
+  padding: 0;
+  background: none;
+}
+.review-img img {
+  width: 100%;
   border-radius: 12px;
-  background: linear-gradient(135deg, #e5e7eb, #d1d5db);
-  padding: 10px;
-  font-size: 12px;
-  color: #111827;
-  text-align: center;
+  display: block;
 }
 
 .review-body {
